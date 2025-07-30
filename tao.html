@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Cá Nhân - Trần Minh Quân</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="container mx-auto px-4 py-12 max-w-4xl">
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-bold text-blue-700">Võ Ngọc Thắng</h1>
+      <p class="text-gray-600 mt-2">Sinh viên năm 2 - Đại học Nguyễn Tất Thành</p>
+    </header>
+
+    <!-- Profile Card -->
+    <div class="profile-card bg-white rounded-xl overflow-hidden mb-8">
+      <div class="md:flex">
+        <div class="md:w-1/3 p-6 flex justify-center">
+          <img src="tao.jpg" alt="Avatar" class="rounded-full border-4 border-blue-200 w-48 h-48 object-cover" />
+        </div>
+        <div class="md:w-2/3 p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">Thông tin cá nhân</h2>
+          <ul class="space-y-1 text-gray-600">
+            <li><i class="fas fa-birthday-cake mr-2 text-blue-500"></i> 27/11/2005</li>
+            <li><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> TP.HCM</li>
+            <li><i class="fas fa-envelope mr-2 text-blue-500"></i> tlxag13579111315@gmail.com</li>
+            <li><i class="fas fa-phone-alt mr-2 text-blue-500"></i> 0559385939</li>
+          </ul>
+
+          <div class="flex space-x-4 mt-4">
+            <a href="https://www.facebook.com/n.thang.neeee" class="social-icon bg-blue-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/b0_2711/" class="social-icon bg-pink-500"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/B01208" class="social-icon bg-gray-800"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="profile-card bg-white rounded-xl p-6 mb-8">
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Kỹ năng</h3>
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between">
+            <span>Lập trình Web</span><span>85%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between">
+            <span>Thiết kế UI/UX</span><span>50%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between">
+            <span>Tiếng Anh</span><span>90%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interests -->
+    <div class="profile-card bg-white rounded-xl p-6 mb-8">
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Sở thích</h3>
+      <div class="flex flex-wrap gap-4">
+        <span class="tag"><i class="fas fa-camera mr-1"></i> Nhiếp ảnh</span>
+        <span class="tag"><i class="fas fa-code mr-1"></i> Code</span>
+        <span class="tag"><i class="fas fa-film mr-1"></i> Xem phim</span>
+        <span class="tag"><i class="fas fa-running mr-1"></i> Chạy bộ</span>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="profile-card bg-white rounded-xl p-6">
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Dự án</h3>
+      <ul class="space-y-3">
+        <li>
+          <strong>Website Portfolio:</strong> Thiết kế trang giới thiệu cá nhân đơn giản bằng HTML/CSS/JS.
+        </li>
+        <li>
+          <strong>App Thư viện AI:</strong> Giải nhất giải NIIE StartUp 2025 với dự án Thư Viện AI G&L.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center mt-10">
+    <button onclick="openModal()" class="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
+      Xem CV
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="cvModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white p-4 rounded-lg max-w-3xl w-full relative">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-red-600 text-2xl font-bold">&times;</button>
+      <img src="cv.png" alt="CV Image" class="w-full max-h-[80vh] object-contain" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
